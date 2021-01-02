@@ -1,0 +1,22 @@
+{
+  "name": "InterGuard | Beta",
+  "description": "Python 3.6+",
+  "image": "heroku/python",
+  "repository": "https://github.com/moeinovic/v1-f-9",
+  "keywords": ["python", "pyrogram" ],
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org"
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org"
+    },
+    "TOKEN": {
+      "description": "Get this value from @BotFather"
+    }
+  }
+}
