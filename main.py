@@ -1,8 +1,7 @@
 import os
 from pyrogram import Client
 plugins = dict(root="plugins")
-API_ID = os.environ.get('APP_ID')
-API_HASH = os.environ.get('APP_HASH')
+API_ID = int(os.environ.get('APIID'))
+API_HASH = os.environ.get('APIHASH')
 TOKEN = os.environ.get('TOKEN')
-print(API_ID,API_HASH,TOKEN)
-#Client("bot", api_id=int(API_ID), api_hash=API_HASH, bot_token=TOKEN, plugins=plugins).run()
+Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN, plugins=plugins).run()
