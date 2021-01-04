@@ -9,8 +9,7 @@ async def inlienQuery(c,q):
   results=[
    InlineQueryResultArticle(
       'your title',
-      InputTextMessageContent('your text content',reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Test', callback_data='test')]])),
-      description='inline query description'
+      InputTextMessageContent('your text content', description='inline query description')
     )
   ]
 )
