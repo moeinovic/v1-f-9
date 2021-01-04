@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent
+from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent, InlineKeyboardMarkup, InlineKeyboardButton
 @Client.on_message(filters.command("start") & filters.private)
 def echo(client, message):
     message.reply("Hi Men")
@@ -9,7 +9,7 @@ async def inlienQuery(c,q):
   results=[
    InlineQueryResultArticle(
       'your title',
-      InputTextMessageContent('your text content'),
+      InputTextMessageContent('your text content',reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('Test', callback_data='test')]])),
       description='inline query description'
     )
   ]
