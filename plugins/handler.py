@@ -9,7 +9,7 @@ async def inlienQuery(c,q):
   results=[
    InlineQueryResultArticle(
       'your title',
-      InputTextMessageContent('your text content', description='inline query description')
+      InputTextMessageContent('your text content'), description='inline query description')
     )
   ]
 )
