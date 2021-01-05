@@ -1,15 +1,7 @@
 from pyrogram import Client, filters
+from pyromod import listen
 from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent, InlineKeyboardMarkup, InlineKeyboardButton
 @Client.on_message(filters.command("start") & filters.private)
-def echo(client, message):
-    message.reply("Hi Men")
-@Client.on_inline_query()
-async def inlienQuery(c,q):
-  await c.answer_inline_query(q.id, 
-  results=[
-   InlineQueryResultArticle(
-      'your title',
-      InputTextMessageContent('your text content'), description='inline query description')
-    )
-  ]
-)
+async def echo(c, m):
+    answer = await c.ask(m.chat.id, '*Send me your name:*', parse_mode='Markdown')
+    await c.send_message(m.chat.id, f'Your name is: {answer.text}')
