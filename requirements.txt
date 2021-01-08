@@ -3,3 +3,4 @@ TgCrypto
 requests
 psycopg2
 pyromod
+beautifulsoup4
