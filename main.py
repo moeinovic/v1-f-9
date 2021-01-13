@@ -1,6 +1,6 @@
 import os
 from pyrogram import Client, filters
-from pyromod import listen
+import pyromod
 plugins = dict(root="plugins")
 API_ID = int(os.environ.get('APIID'))
 API_HASH = os.environ.get('APIHASH')
